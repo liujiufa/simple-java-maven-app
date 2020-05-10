@@ -20,16 +20,31 @@ public class SimpleBaiduTestTest {
 	}
 
 	@Test
-	public void testMain() {
+	public void testMain1() {
 		 System.setProperty("webdriver.chrome.driver", "G:/chromedriver.exe");
 		   WebDriver driver=new ChromeDriver();
 		   driver.get("https://www.baidu.com/");
 		   WebElement element1=driver.findElement(By.id("#quickdelete"));
-		   WebElement element=driver.findElement(By.cssSelector("#kw"));
-		   assertEquals( element1.getAttribute("title"),"清空",null);
-		   assertEquals( driver.getTitle(),"百度一下，你就知道",null);
-		   assertEquals( element.getText(),"");
-		   
+		   assertEquals( element1.getAttribute("title"),"清空",null);	  
+		
 	}
+	@Test
+	public void testMain2() {
+		 System.setProperty("webdriver.chrome.driver", "G:/chromedriver.exe");
+		   WebDriver driver=new ChromeDriver();
+		   driver.get("https://www.baidu.com/");
+		   WebElement element=driver.findElement(By.cssSelector("#kw"));
+		   assertEquals( element.getText(),"");
+		
+	}
+	@Test
+	public void testMain3() {
+		 System.setProperty("webdriver.chrome.driver", "G:/chromedriver.exe");
+		   WebDriver driver=new ChromeDriver();
+		   driver.get("https://www.baidu.com/");
+		   assertEquals( driver.getTitle(),"百度一下，你就知道",null);
+		
+	}
+	
 
 }
